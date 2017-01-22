@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Infos 2.0</title>
+    <meta charset="utf8"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body ng-app="weather">
+    <header class="center">
+        <a ui-sref="home" href>
+            <h1>Weather</h1>
+        </a>
+        
+    </header>
+    <main ui-view ng-controller="WeatherController as ctrl" class="container">
+        
+    </main>
+    <footer class="page-footer grey">
+        <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+            <h5 class="white-text">Weather</h5>
+            <p class="grey-text text-lighten-4">Antoine Guingand</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+            <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">IUT Robert Schuman</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Departement Informatique</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <div class="footer-copyright">
+        <div class="container">
+        Made with <a class="light-blue-text text-lighten-3" href="http://materializecss.com">Materialize</a> & 
+        <a class="light-blue-text text-lighten-3" href="https://angularjs.org/">AngularJS</a>
+        </div>
+        </div>
+    </footer>
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
+    <script type="text/javascript" src="js/meteo.js"></script>
+</body>
+</html>
+    
