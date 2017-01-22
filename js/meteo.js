@@ -38,13 +38,13 @@ angular.module('weather')
         data.city='';
     }
     function update(index) {
-        WeatherService.get_city(data.cities[index].name)
-         .then(function mySuccess(datas) {
-            data.cities[index] = datas;
-        }, function myError(response) {
-            Materialize.toast("Les données de "+data.cities[index].name+" n'ont pas pu être chargées"
-                             +"("+response.status+")");
-        });
+		WeatherService.get_city(data.cities[index].name)
+		 .then(function mySuccess(datas) {
+			data.cities[index] = datas;
+		}, function myError(response) {
+			Materialize.toast("Les données de "+data.cities[index].name+" n'ont pas pu être chargées"
+							 +"("+response.status+")");
+		});
     }
     var ind=0;
     function refresh() {
@@ -107,7 +107,9 @@ angular.module('weather')
                +name+'&appid=f7f7f349aea9ca3ba7f9d8004b0ee927&units=metric')
                .then(function success(response) {
                    return weatherObj(response.data);
-               },function(res){});
+               },function error(res){
+				   warnUser();
+			   });
     }
   return {
       get_city:get_city
