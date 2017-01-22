@@ -1,6 +1,6 @@
 angular.module('weather')
 .controller('WeatherController', function(WeatherService) {
-    var initCities = ['Strasbourg','Colmar','Turckheim','Wintzenheim','Londres','Bruxelles'];
+    var initCities = ['Paris','Strasourg','Marseille'];
     var data = {
         city:'', // variable contenant la ville courante à traiter
         cities: [],
